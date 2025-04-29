@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+.app {
+  min-height: 100vh;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  padding: 82px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(226, 43%, 10%);
+  color: #fff;
+}
+.app header .infoCard {
+  background-color: hsl(235, 46%, 20%);
+  height: 204px;
+  border-radius: 10px;
+  min-width: 328px;
+}
+.app header .infoCard .info {
+  height: 134px;
+  width: 100%;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app header .infoCard .info img {
+  width: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+  height: 70px;
+}
+.app header .infoCard .info .name {
+  margin-left: 19px;
+}
+.app header .infoCard .info .name p {
+  color: hsl(236, 100%, 87%);
+  font-size: 16px;
+}
+.app header .infoCard .info .name h1 {
+  font-weight: 300;
+  font-size: 26px;
+}
+.app header .infoCard .tabs ul {
+  font-weight: 300;
+  height: 65px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: hsl(236, 100%, 87%);
+}
+.app header .infoCard .tabs ul li {
+  cursor: pointer;
+}
+.active {
+  color: #fff;
+}
