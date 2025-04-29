@@ -48,8 +48,8 @@ export default {
         { id: 3, name: 'Monthly', timeframe: 'monthly', Label: 'Month' }
       ],
       currentTab: 2, // Default selected Weekly
-      currentTimeframe: 'weekly', // 当前时间范围
-      currentData: [], // 当前数据
+      currentTimeframe: 'weekly', // Current time range
+      currentData: [], // Current data
       dataList: [],
       currentLabel: 'Week'
     }
@@ -63,10 +63,25 @@ export default {
       this.getDailyData(this.currentTimeframe)
       // console.log(this.currentLabel)
     },
+    // async getDailyData (timeframe) {
+    //   const { data } = await axios.get(`http://localhost:3000/${timeframe}Activities`)
+    //   this.dataList = data
+    // }
     async getDailyData (timeframe) {
-      const { data } = await axios.get(`http://localhost:3000/${timeframe}Activities`)
-      this.dataList = data
+      const { data } = await axios.get('/data.json')
+      if (timeframe === 'daily') {
+        this.dataList = data.dailyActivities
+      } else if (timeframe === 'weekly') {
+        this.dataList = data.weeklyActivities
+      } else if (timeframe === 'monthly') {
+        this.dataList = data.monthlyActivities
+      }
     }
+    // easy
+    // async getDailyData (timeframe) {
+    //   const { data } = await axios.get('/data.json')
+    //   this.dataList = data[`${timeframe}Activities`] || []
+    // }
   },
   created () {
     this.getDailyData(this.currentTimeframe)

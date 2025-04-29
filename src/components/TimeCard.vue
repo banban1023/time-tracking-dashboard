@@ -114,7 +114,7 @@ export default {
     padding-top: 46px;
     &:hover {
       .context {
-        background-color: rgb(52, 57, 123); // 你可以改成你想要的颜色
+        background-color: rgb(52, 57, 123);
       }
     }
     .context {
@@ -122,7 +122,7 @@ export default {
       padding: 30px;
       .icon-ell:hover {
         svg path {
-          fill: #ffffff; // 图标变白
+          fill: #ffffff;
         }
       }
       .dashboard-title {

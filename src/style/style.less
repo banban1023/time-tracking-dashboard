@@ -66,12 +66,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: clamp(16px, 4vw, 32px); // 控制 infoCard和main之间始终有间距
+    gap: clamp(16px, 4vw, 32px);
     header {
       width: 256px;
       .infoCard {
-        width: 100%; // 默认填满父容器
-        max-width: 256px; // 限制最大宽度
+        width: 100%;
+        max-width: 256px;
         height: 520px;
         .info {
           width: 100%;
@@ -112,9 +112,9 @@
     main {
       margin-top: 0;
       display: grid;
-      grid-template-rows: repeat(2, 1fr); // 2行
+      grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, minmax(0, 256px));
-      gap: 32px; // 卡片间距
+      gap: 32px;
       justify-content: center;
     }
   }
